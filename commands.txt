@@ -1,0 +1,23 @@
+//1. download openssl
+//crete virtual enviroment
+conda create --name image_processing_env python=3.8
+ //environment location: C:\Users\userName\anaconda3\envs\image_processing_env
+
+//activate it
+conda activate image_processing_env
+
+//install libraries
+conda install flask 
+ # or 
+ pip install fastapi uvicorn 
+conda install -c conda-forge opencv
+pip install scikit-image pillow
+
+
+
+//run python server
+uvicorn server:app --host 0.0.0.0 --port 8000  # For FastAPI
+
+//or
+//run server
+uvicorn src.main:app --reload
